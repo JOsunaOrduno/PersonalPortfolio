@@ -1,0 +1,31 @@
+:root {
+    --time: 1s;
+    --size: 300px;
+    --ssize: 50px;
+}
+.moon{
+    background: 100% 100% no-repeat;
+    border-radius: 50%;
+    height:var(--size);
+    width:var(--size);
+    box-shadow: 0 0 500px 50px white;
+}
+.moon img{
+    width: calc(var(--size) + var(--ssize));
+    height: calc(var(--size) + var(--ssize));
+}
+#moon{
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 100vw;
+    height: 100vh;
+    transition: var(--time);
+}
+#moon.moonA{
+    transform: translate(42%, 42%);
+    transition: var(--time);
+}
+
+
+

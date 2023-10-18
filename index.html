@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/day.css">
+    <link rel="stylesheet" href="styles/noon.css">
+    <link rel="stylesheet" href="styles/night.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -22,6 +26,7 @@
         </div>
         
     </nav>
+
     <div class="content">
         <section id="home" class="active">
             <div class="card">
@@ -73,9 +78,30 @@
                         </ul>
                 </div>
             </div>
-        </section>
-        <script src="script.js"></script>
+        </section> 
     </div>
+    <div class="animations">
+        <div class="day">
+            <div class="cloud cloudA">
+                <div class="obj1"></div>
+                <div class="obj2"></div>
+                <div class="obj3"></div>
+            </div>
+            <div class="cloud cloudA">
+                <div class="obj1"></div>
+                <div class="obj2"></div>
+                <div class="obj3"></div>
+            </div>
+        </div>
+        <div class="noon"></div>
+        <div class="night">
+            <div id="moon"><div class="moon"><img src="imgs/full-moon.png" alt=""></div></div>
+            <div id="lamp"></div>
+        </div>
+    </div>
+    <div id="gradient"></div>
+
     <footer></footer>
+    <script src="scripts/slider.js"></script>
 </body>
 </html>

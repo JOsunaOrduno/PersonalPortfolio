@@ -1,0 +1,36 @@
+:root {
+    --time: 1s;
+}
+.cloud{
+    position: absolute;
+    top: 40%;
+    left: -100%;
+    width: 50vw;
+    /*height: 20px;*/
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+    transition: var(--time);
+}
+.cloud:nth-of-type(2){
+    top: 60%;
+    left: 150%;
+}
+
+.cloudA{
+    transform: translateX(150%);
+    transition: var(--time);
+}
+.cloudA:nth-of-type(2){
+    transform: translateX(-140%);
+}
+
+.obj1{
+    box-shadow:  0 0 120px 150px white;
+}
+.obj2{
+    box-shadow:  0 0 220px 220px rgb(248, 248, 248);
+}
+.obj3{
+    box-shadow:  0 0 100px 75px white;
+}
