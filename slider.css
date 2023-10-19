@@ -1,0 +1,94 @@
+:root {
+    --day1: rgb(54 192 255);
+    --day2: rgb(203 239 237);
+    --noon1: rgb(247, 161, 80);
+    --noon2: rgb(253, 186, 255);
+    --night1: rgb(35, 36, 87);
+    --night2: rgb(44, 40, 247);
+    --time: 1s;
+}
+
+.active{
+    transform: translateY(100%);
+    transition: var(--time);
+    z-index: 2;
+}
+.aactive{
+    transform: translateY(100%);
+    animation: desdeAbajo var(--time) ease;
+    z-index: 2;
+}
+.disable{
+    animation: haciaAbajo var(--time) ease;
+}
+
+@keyframes desdeAbajo{
+    0%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+@keyframes haciaAbajo{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(200%);
+    }
+}
+
+#bar{
+    height: 100%;
+    transition: var(--time);
+}
+.b1{
+    transform: translateY(33.3%);
+    transition: var(--time);
+}
+.b2{
+    transform: translateY(67%);
+    transition: var(--time);
+}
+
+
+body{
+    background: var(--day1);
+    transition: var(--time);
+}
+.night{
+    background: var(--night1);
+    transition: var(--time);
+}
+.noon{
+    background: var(--noon1);
+    transition: var(--time);
+}
+
+/*section:nth-of-type(1){
+    background: linear-gradient(var(--day1), var(--day2), var(--noon1)); 
+}
+section:nth-of-type(2){
+    background: linear-gradient(var(--noon1), var(--noon2), var(--night1)); 
+}
+section:nth-of-type(3){
+    background: linear-gradient(var(--night1), var(--night2), var(--day1)); 
+    
+}*/
+
+#gradient{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0px 2px 600px 200px var(--day2);
+    transition: var(--time);
+}
+#gradient.noonGradient{
+    box-shadow: 0px 2px 600px 200px var(--noon2);
+    transition: var(--time);
+}
+#gradient.nightGrandient{
+    box-shadow: 0px 2px 600px 200px var(--night2);
+    transition: var(--time);
+}
