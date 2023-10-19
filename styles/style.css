@@ -2,7 +2,10 @@ body{
     margin: 0;
     background: rgb(17, 16, 19);
     overflow: hidden;
-    margin-right: 10px;
+    /*margin-right: 10px;*/
+}
+
+h1{    font-size: 28px;
 }
 
 
@@ -14,6 +17,7 @@ body{
     background: rgb(112, 112, 112);
     position: absolute;
     z-index: 100;
+    display: none;
 }
 
 .bar{
@@ -33,7 +37,7 @@ nav{
     width: 100%;
     height: 50px;
     justify-content: space-between;
-    background: powderblue;
+    background: none;
     position: fixed;
     z-index: 100;
 }
@@ -44,10 +48,18 @@ nav button{
     height: 100%;
     background: none;
     border: none;
-    border-left: black;
     cursor: pointer;
-    
+    font-size: 20px;
+    transition: var(--time);
 }
+
+nav button:hover{
+    color:rgb(0, 0, 0);
+    background-color: rgba(220, 241, 253, 0.24);
+    opacity: .8;
+    transition: 0.1s;
+}
+
 
 .content{
     display: flex;
@@ -71,43 +83,42 @@ section{
 }
 
 .card{
-    height: 600px;
+    height: 500px;
     width: 90%;
+    text-align: center;
 }
-.card:nth-of-type(1){
-    /*margin: 100px;*/
-    display: flex;
-    justify-content: center;
-}
-.card:nth-of-type(2){
-    background: azure;
-    /*margin: 100px;*/
-}
-.card:nth-of-type(3){
-    background: wheat;
-}
+
+
 
 
 
 /*Home Section**********************************/
-#home{
+#home .card{
+    display: flex;
+    justify-content: center;
     
 }
+
 #homeImg{
     margin: 0 25px;
-    padding-top: 100px
+    padding-top: 50px
 }
 #homeImg img{
-    height: 80%;
+    height: 350px;
 }
 #aboutMe{
-    padding: 200px 0;
+    padding-top: 100px;
     width: 30%;
     text-align: justify;
 }
 #aboutMe h1{
     font-size: 185%;
+    text-wrap: nowrap;
 }
+#aboutMe p{
+    color: #2e2e2e;
+}
+
 /*Favicons*/
 .fa {
     /* padding: 20px; */
@@ -126,20 +137,108 @@ section{
 
 
 /*Skills Section**********************************/
-#skills{
-    
+#skills .card{
+    color: lightsteelblue;
+    height: 600px;
+    text-align: left;
 }
-.projects h1,.skills h1{
+#skills h1{
     text-align: center;
 }
+#skills p{
+    text-align: justify;
+}
 .skillsContent{
-    display: flex;
+    display: grid;
     justify-content: space-around;
+    grid-template-columns: auto auto;
+    justify-items: center;
+}
+
+#skills .value{
+    width: 200px;
+}
+
+.list{
+    justify-content: center;
 }
 
 /*Projects Section********************************/
-#projects{
-    
+#projects .card{
+    color: lightsteelblue;
+    height: 700px;
+}
+.projectsContent{
+    display: grid;
+    grid-template-columns: auto auto;
+    /* align-items: center; */
+    justify-items: center;
+    /* align-content: space-evenly; */
+    height: 100%;
+    width: 100%;
+}
+.projectsContent a{
+    width: 450px;
+    height: 250px;
+    position: relative;
+}
+.project{
+    width: 100%;
+    height: 100%;
+}
+.project img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    border-radius: 5%;
+}
+
+.project img.tmb:hover{
+    opacity: 0;
 }
 
 
+/*.project:hover #hc{
+    display: absolute;
+}*/
+
+@media only screen and (max-width: 600px) {
+    nav{
+        width: auto;
+    }
+    body{
+        overflow: hidden;
+        height: 100vh;
+    }
+    #home .card{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+    #homeImg img {
+        height: 250px;
+    }
+    #aboutMe{
+        width: 90%;
+        text-align: justify;
+    }
+    #skills .card {
+        height: 90vh;
+        width: 100%;
+    }
+    .skillsContent {
+        grid-template-columns: auto;
+        width: 100%;
+    }
+    #skills .card p {
+        width: auto;
+        
+    }
+    #projects
+    {
+        justify-content: normal;
+    }
+  }

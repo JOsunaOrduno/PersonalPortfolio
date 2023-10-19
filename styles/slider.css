@@ -1,8 +1,9 @@
 :root {
     --day1: rgb(54 192 255);
     --day2: rgb(203 239 237);
-    --noon1: rgb(247, 161, 80);
-    --noon2: rgb(253, 186, 255);
+    --noon1: rgb(82 24 148);
+    --noon2: rgb(222 82 4);
+    --noon3: rgb(255 255 255);
     --night1: rgb(35, 36, 87);
     --night2: rgb(44, 40, 247);
     --time: 1s;
@@ -85,10 +86,21 @@ section:nth-of-type(3){
     transition: var(--time);
 }
 #gradient.noonGradient{
-    box-shadow: 0px 2px 600px 200px var(--noon2);
+    box-shadow: 0px 2px 600px 40vh var(--noon2);
     transition: var(--time);
 }
 #gradient.nightGrandient{
     box-shadow: 0px 2px 600px 200px var(--night2);
+    transition: var(--time);
+}
+
+#upGradient{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    transition: var(--time);
+}
+#upGradient.noonGradient{
+    box-shadow: 0px 2px  300px 60px var(--night2);
     transition: var(--time);
 }

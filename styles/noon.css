@@ -1,0 +1,138 @@
+#sun{
+    position: absolute;
+    bottom: -650px;
+    width: 300px;
+    height: 200px;
+    background-color: #e9690b;
+    box-shadow: 0 150px 600px 350px #ffff0040;
+    border-radius: 50%;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transition: var(--time);
+}
+#sun.sunA{
+    transform: translateY(-500px);
+    transition: var(--time);
+}
+
+
+.cloud2{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100vw;
+    /* height: 20px; */
+    /* background-color: aliceblue; */
+    display: flex;
+    transition: var(--time);
+    justify-content: space-evenly;
+    z-index: 1;
+}
+
+.cloud2:nth-of-type(2){
+    top: 47%;
+    z-index: 0;
+}
+.cloud2:nth-of-type(3){
+    width: 40vw;
+    top: 40%;
+    z-index: 0;
+    left: 50%;
+    
+}
+.cloud2:nth-of-type(4){
+    width: 30vw;
+    top: 42%;
+    z-index: 0;
+    right: 0;
+    position: absolute;
+    left: auto;
+}
+
+.obj4{
+    box-shadow:  -15px 0 100px 70px rgb(228, 129, 228);
+}
+.obj5{
+    box-shadow:  0 0 120px 120px rgb(194, 108, 185);
+}
+.obj6{
+    box-shadow:  0 15px 100px 75px rgb(209, 125, 209);
+}
+.obj7{
+    box-shadow:  0 0 100px 75px rgb(211, 99, 202);
+}
+
+.obj8{
+    box-shadow:  -15px 0 100px 70px rgb(199, 136, 194);
+
+}
+.obj9{
+    box-shadow:  0 0 200px 120px rgb(201, 98, 190);
+
+}
+.obj10{
+    box-shadow:  0 15px 100px 75px rgb(175, 101, 170);
+}
+
+.obj11{
+    box-shadow:  0 0 100px 50px rgb(211, 104, 204);
+}
+
+
+#noonCloud{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: var(--time);
+    
+}
+
+#noonCloud.noonCloudA{
+    transform: translateY(-20%);
+    opacity: 1;
+    transition: var(--time);
+}
+li{
+    font-size: larger;
+}
+li span{
+    width: 30%;
+    height: 10px;
+    background-color: #e9690b;
+    display: inline-block;
+    border-radius: 10px;
+    
+}
+.percent li{
+    list-style-type: none;
+    width: 300px;
+    position: relative;
+}
+.percentN li{
+    list-style-type: none;
+}
+
+.languages{
+    display: -webkit-inline-box;
+}
+
+#skills .card p{
+    width: 400px;
+    justify-content: justify;
+}
+
+.bgnBar{
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    left: 0px;
+    top: 2px;
+    z-index: -1;
+    border-radius: 10px;
+}

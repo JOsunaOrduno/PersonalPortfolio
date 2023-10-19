@@ -8,9 +8,13 @@ let home = this.document.getElementById("home");
 let time = 1050;//Time to wait until you can repeat the function
 let bar = this.document.getElementById("bar");
 let gradient = this.document.getElementById("gradient");
+let ugradient = this.document.getElementById("upGradient");
 let cloud = this.document.getElementsByClassName("cloud");
 let moon = this.document.getElementById("moon");
-
+let comets = this.document.getElementById("comets");
+let noonCloud = this.document.getElementById("noonCloud");
+let starsc = this.document.getElementById("starsc");
+let sun = this.document.getElementById("sun");
 // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
 window.addEventListener("wheel", function(e){ // or window.addEventListener("scroll"....
     let home = this.document.getElementById("home");
@@ -103,12 +107,25 @@ function noon(){//Skills
     bar.classList.add('b1');
     skillsBool = true;
     gradient.classList.add('noonGradient');
+    noonCloud.classList.add('noonCloudA');
+    ugradient.classList.add('noonGradient');
+    homeBtn.classList.add('nightTxt');
+    skillsBtn.classList.add('nightTxt');
+    projectsBtn.classList.add('nightTxt');
+    sun.classList.add('sunA');
+    
 }
 function night(){//Projects
     document.body.classList.add("night");
     bar.classList.add('b2');
     gradient.classList.add('nightGrandient');
     moon.classList.add('moonA');
+    homeBtn.classList.add('nightTxt');
+    skillsBtn.classList.add('nightTxt');
+    projectsBtn.classList.add('nightTxt');
+    comets.classList.add('cometsA');
+    starsc.classList.add('starscA');
+    
 }
 
 function clean(){//Clear all the classes
@@ -131,6 +148,16 @@ function clean(){//Clear all the classes
     cloud[0].classList.remove('cloudA');
     cloud[1].classList.remove('cloudA');
     moon.classList.remove('moonA');
+    homeBtn.classList.remove('nightTxt');
+    skillsBtn.classList.remove('nightTxt');
+    projectsBtn.classList.remove('nightTxt');
+    comets.classList.remove('cometsA');
+    noonCloud.classList.remove('noonCloudA');
+    starsc.classList.remove('starscA');
+    ugradient.classList.remove('noonGradient');
+    sun.classList.remove('sunA');
+    //document.button.classList.remove('nightButton')
+
     homeBool = false;
     skillsBool = false;
 }
