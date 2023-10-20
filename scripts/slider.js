@@ -169,5 +169,9 @@ function timer(){//Wait until you can repeat the function
           }, time);
 }
 
-
-
+window.onload = function() {
+    if($(window).width() < 500){
+        alert("This page is not optimized for mobile devices, please use a computer or a tablet.")
+    }
+    console.log($(window).width() );
+  };
